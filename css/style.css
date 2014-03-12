@@ -1,4 +1,5 @@
 /* CSS crunched with Crunch - http://crunchapp.net/ */
+/*! Less CSS STYLE Romain C. */
 /* Lib reset CSS */
 /*
 * {  
@@ -363,6 +364,7 @@ td,
 th {
   padding: 0;
 }
+/* Lib LESS CSS Mixins Elements.less */
 /*---------------------------------------------------
     LESS Elements 0.9
   ---------------------------------------------------
@@ -841,6 +843,8 @@ textarea {
   height: 100px;
   width: 100px;
 }
+/*! Licence Romain C. 
+flexbox.less  */
 .debug3 {
   border-bottom: 5px solid red;
   display: block;
@@ -884,10 +888,7 @@ https://github.com/derekallard/LESSCSS-Vendor-Prefixes
 
 */
 /*! Licence Romain C. 
-mixins less  */
-/*
-http://lesshat.com/
-*/
+mymixins less  */
 .code {
   color: #1A1;
   background-color: #111;
@@ -971,9 +972,6 @@ http://lesshat.com/
 }
 /*! Licence Romain C. 
 fonts  */
-/*
-http://lesshat.com/
-*/
 /* ROBOTO IMPORT via google - KO avec simpleLESS !!! */
 @font-face {
   font-family: 'Roboto';
@@ -982,6 +980,8 @@ http://lesshat.com/
   src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v9/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
 }
 /* FIN ROBOTO IMPORT via google !!! */
+/*! Licence Romain C. 
+component gncard less  */
 .debug {
   border: 2px solid red;
 }
@@ -1066,6 +1066,8 @@ http://lesshat.com/
 	.debug;
 }
 */
+/*! Licence Romain C. 
+SVG icons  */
 html.svg {
   background: none !important;
 }
