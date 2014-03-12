@@ -1,0 +1,60 @@
+.debug {} // Default to prevent failed less CSS compilation
+.debug2 {} // Default to prevent failed less CSS compilation
+//.debug { border:2px solid red; } // Comment to hide
+//.debug2 { border-bottom:5px solid red; } // Comment to hide
+.debug3 { border-bottom:5px solid red; display:block; height:100px; width:100px;} // Comment to hide
+
+
+
+// CSS3 Prefix Mixins :
+.display-flex() {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}	  
+
+.display-flex(@index) {
+	-webkit-box-flex: @index;      /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-flex: @index;         /* OLD - Firefox 19- */
+	-webkit-flex: @index;          /* Chrome */
+	-ms-flex: @index;              /* IE 10 */
+	flex: @index;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}	  
+
+
+
+
+
+
+// Demo of usage :
+
+
+.flexbox-container {
+	.display-flex;
+	
+	.col1 {
+		order: 1;
+		//width: 60%;
+	}
+	
+	.box, .col2 {
+		.display-flex(1);
+		//order: 2;
+		//width: 20%;               /* For old syntax, otherwise collapses. */
+	}
+	
+	.block-vertically-centered {
+	  display:block;
+	  margin: auto;
+	}
+ }
+ 
+
+ 
+ // Block Centered horizontally + vertically inside flex container
+ // http://learnlayout.com/flexbox.html
+ 
+
+ 

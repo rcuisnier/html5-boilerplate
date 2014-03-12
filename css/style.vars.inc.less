@@ -1,0 +1,88 @@
+
+// Colors LESS
+
+/*
+
+@colorA : #e8a322; // FA2 >>> BBB
+//@colorA : #F00;
+@colorB : #ffeab1; // FEB >>> CCC
+//@colorB : #0F0;
+@colorC : #372823; // 432 Marron fonce >>> C
+//@colorC : #00F; 
+@colorD : #a2a14d; // AA5 >>> CC
+//@colorD : #F00; 
+@colorE : #752201; // 720 Marron clair >>> BB
+
+@colorF:#963; // 789 txt subtitle >>> DD
+@colorG:#EEE; // EEE   >>> AAAA
+@colorG:@colorB; //EEE >>> CCC
+@colorH:#888; // 888   >>> AAA
+@colorI:#333; // 333   >>> AA
+
+//@colorJ:#5f6f81; // Dark Blue : link menu >>> C
+//@colorJ:@colorC; // DEPRECATED
+
+//@colorK:#c6d0da; // DDD >>> AAAA
+
+*/
+// Nuance gris
+@colorA:#111;
+@colorAA:#555;
+@colorAAA:#999;
+@colorAAAA:#EEE;
+
+// Nuance rouge/marron
+@colorB:#410;
+@colorBB:#720; 
+@colorBBB:#FA2;
+@colorBBBB:#EDB;
+
+// Nuance Jaune
+@colorC:#432; 
+@colorCC:#AA5;
+@colorCCC:#FFB;
+
+// Nuance Verte
+@colorD:#123;
+@colorDD:#789;
+@colorDDD:#DEF;
+
+.colorA { color:@colorA; }
+.colorAA { color:@colorAA; }
+.colorAAA { color:@colorAAA; }
+.colorAAAA { color:@colorAAAA; }
+.colorB { color:@colorB; }
+.colorBB { color:@colorBB; }
+.colorBBB { color:@colorBBB; }
+.colorC { color:@colorC; }
+.colorCC { color:@colorCC; }
+.colorCCC { color:@colorCCC; }
+.colorD { color:@colorD; }
+.colorDD { color:@colorDD; }
+.colorDDD { color:@colorDDD; }
+// TODO : bgcolorA
+/*
+// DEPRECATED
+.colorE { color:@colorE; }
+.colorF { color:@colorF; }
+.colorG { color:@colorG; }
+.colorH { color:@colorH; }
+.colorI { color:@colorI; }
+.colorJ { color:@colorJ; }
+*/
+
+.colorMenuLink {   color:@colorB; background-color:@colorBBBB; }
+.colorMenuLinkHover {color:@colorBBBB; background-color:@colorB;}
+.colorProfileGoogle {color:@colorCCC; background-color:@colorA; .gradient( rgba(0,0,0,11%) , rgba(0,0,0,80%) , rgba(0,0,0,3%) ); }
+
+
+
+// Structure :
+@menuHeight:3.3em; // 60px
+@menuIconWidth:3.3em; // 60px
+//@menuWidth:370px; // original Large
+@menuWidth:100%; // original
+@menuWidthMedium:50%; // original
+@menuWidthLarge:40%; // original
+@menuWidthLarge:30%; // original
+

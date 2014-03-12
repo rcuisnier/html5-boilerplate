@@ -1,0 +1,111 @@
+// http://stackoverflow.com/questions/10956636/how-to-use-svg-sprite-sheet-as-css-background-image-while-maintaining-aspect-rat
+.svgSpriteA { background-image: url("data:image/svg+xml,<svg viewBox='0 0 600 400' width='600'  height='400'  
+  version='1.1'
+  xmlns:svg='http://www.w3.org/2000/svg'
+  xmlns='http://www.w3.org/2000/svg'  
+  >
+  <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+  <title>chosen_sprite</title>
+  <g>
+    <title>Add</title>
+    <rect fill='none' stroke-width='10' stroke-dasharray='null' stroke-linejoin='null' stroke-linecap='null' x='5' y='5' width='90' height='90' id='svg_1' stroke='#dcdcdc'/>
+    <line id='svg_2' y2='50' x2='70' y1='50' x1='30' stroke-linecap='round' stroke-linejoin='null' stroke-dasharray='null' stroke-width='12' stroke='#00a00c' fill='none'/>
+    <line id='svg_3' y2='30' x2='50' y1='70' x1='50' stroke-linecap='round' stroke-linejoin='null' stroke-dasharray='null' stroke-width='12' stroke='#00a00c' fill='none'/>
+  </g>
+  <g>
+    <title>Delete</title>
+    <rect fill='none' stroke-width='10' stroke-dasharray='null' stroke-linejoin='null' stroke-linecap='null' x='105' y='5' width='90' height='90' id='svg_1' stroke='#dcdcdc'/>
+    <line id='svg_2' y2='70' x2='170' y1='30' x1='130' stroke-linecap='round' stroke-linejoin='null' stroke-dasharray='null' stroke-width='12' stroke='#ff0000' fill='none'/>
+    <line id='svg_3' y2='30' x2='170' y1='70' x1='130' stroke-linecap='round' stroke-linejoin='null' stroke-dasharray='null' stroke-width='12' stroke='#ff0000' fill='none'/>
+  </g>
+  <g>
+    <title>Expand Dark</title>
+    <rect stroke='#505050' id='svg_1' height='90' width='90' y='5' x='205' stroke-linecap='null' stroke-linejoin='null' stroke-dasharray='null' stroke-width='10' fill='none'/>
+    <line fill='none' stroke='#000000' stroke-width='12' stroke-dasharray='null' stroke-linejoin='null' stroke-linecap='round' x1='250' y1='65' x2='280' y2='35' id='svg_2'/>
+    <line fill='none' stroke='#000000' stroke-width='12' stroke-dasharray='null' stroke-linejoin='null' stroke-linecap='round' x1='220' y1='35' x2='250' y2='65' id='svg_3'/>
+  </g>
+  <g>
+    <title>Collapse Dark</title>
+    <rect stroke='#505050' height='90' width='90' y='5' x='305' stroke-linecap='null' stroke-linejoin='null' stroke-dasharray='null' stroke-width='10' fill='none' id='svg_4'/>
+    <line fill='none' stroke='#000000' stroke-width='12' stroke-dasharray='null' stroke-linejoin='null' stroke-linecap='round' x1='350' y1='35' x2='380' y2='65' id='svg_5'/>
+    <line fill='none' stroke='#000000' stroke-width='12' stroke-dasharray='null' stroke-linejoin='null' stroke-linecap='round' x1='320' y1='65' x2='350' y2='35' id='svg_6'/>
+  </g>
+  <g>
+    <title>Expand Green</title>
+    <rect fill='none' stroke-width='10' stroke-dasharray='null' stroke-linejoin='null' stroke-linecap='null' x='405' y='5' width='90' height='90' id='svg_1' stroke='#dcdcdc'/>
+    <line id='svg_2' y2='35' x2='480' y1='65' x1='450' stroke-linecap='round' stroke-linejoin='null' stroke-dasharray='null' stroke-width='12' stroke='#00a00c' fill='none'/>
+    <line id='svg_3' y2='65' x2='450' y1='35' x1='420' stroke-linecap='round' stroke-linejoin='null' stroke-dasharray='null' stroke-width='12' stroke='#00a00c' fill='none'/>
+  </g>
+  <g>
+    <title>Collapse Green</title>
+    <rect fill='none' stroke-width='10' stroke-dasharray='null' stroke-linejoin='null' stroke-linecap='null' x='505' y='5' width='90' height='90' id='svg_1' stroke='#dcdcdc'/>
+    <line id='svg_2' y2='65' x2='580' y1='35' x1='550' stroke-linecap='round' stroke-linejoin='null' stroke-dasharray='null' stroke-width='12' stroke='#00a00c' fill='none'/>
+    <line id='svg_3' y2='35' x2='550' y1='65' x1='520' stroke-linecap='round' stroke-linejoin='null' stroke-dasharray='null' stroke-width='12' stroke='#00a00c' fill='none'/>
+  </g>
+  <g>
+    <title>Search</title>
+    <circle id='svg_9' r='32' cy='140' cx='60' stroke-width='8' stroke='#000000' fill='none'/>
+    <line id='svg_11' y2='167.5' x2='32.5' y1='190' x1='10' stroke-linecap='round' stroke-linejoin='null' stroke-dasharray='null' stroke-width='12' stroke='#000000' fill='none'/>
+  </g>
+  <g>
+    <title>Search 2</title>
+    <rect id='svg_10' stroke='#505050' height='90' width='90' y='105' x='105' stroke-linecap='null' stroke-linejoin='null' stroke-dasharray='null' stroke-width='10' fill='none'/>
+    <circle r='25' cy='142.5' cx='157.5' stroke-width='8' stroke='#000000' fill='none' id='svg_7'/>
+    <line y2='165' x2='135' y1='180' x1='120' stroke-linecap='round' stroke-linejoin='null' stroke-dasharray='null' stroke-width='12' stroke='#000000' fill='none' id='svg_8'/>
+  </g>
+</svg>"); }
+
+.svgSprite {
+    //background-image: url('./svgicons/form_icons_sprite.svg');
+	.svgSpriteA;
+    background-repeat: no-repeat;
+    background-size: 600%;
+}
+
+.svgSprite.add {
+    background-position: 0px 0px;
+    width: 12px;
+    height: 12px;
+}
+
+.svgSprite.delete {
+    background-position: -16px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.svgSprite.expandDark {
+    background-position: -24px 0px;
+    width: 12px;
+    height: 12px;
+}
+
+.svgSprite.collapseDark {
+    background-position: -36px 0px;
+    width: 12px;
+    height: 12px;
+}
+
+.svgSprite.expandGreen {
+    background-position: -48px 0px;
+    width: 12px;
+    height: 12px;
+}
+
+.svgSprite.collapseGreen {
+    background-position: -60px 0px;
+    width: 12px;
+    height: 12px;
+}
+
+.svgSprite.search {
+    background-position: 0px -12px;
+    width: 12px;
+    height: 12px;
+}
+
+.svgSprite.search2 {
+    background-position: -16px -16px;
+    width: 16px;
+    height: 16px;
+}

@@ -1,0 +1,74 @@
+/*! Licence Romain C. 
+fonts  */
+/*
+http://lesshat.com/
+*/
+//@import url("less-css3-mixins.less");
+
+//Mises en variables des fontfamily :
+//En CSS : font-family: "Times New Roman", Times, "Liberation Serif", FreeSerif, serif;
+//En less : font-family:@georgia 
+
+
+//Polices à empattements (serif)
+@times: "Times New Roman", Times, "Liberation Serif", FreeSerif, serif;
+//@georgia: Georgia, "DejaVu Serif", Norasi, 'times new roman', 'nimbus roman no9 l', serif; 
+@georgia: Georgia, "DejaVu Serif", Norasi, 'nimbus roman no9 l', serif; 
+
+//Polices sans empattements (sans-serif)
+@arial: Arial, Helvetica, "Liberation Sans", FreeSans, sans-serif;
+@trebuchet: "Trebuchet MS", Arial, Helvetica, sans-serif;
+@lucida: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", "Luxi Sans", sans-serif;
+@tahoma: Tahoma, Geneva, Kalimati, sans-serif;
+@verdana: Verdana, "DejaVu Sans", "Bitstream Vera Sans", Geneva, sans-serif;
+@impact: Impact, "Arial Black", sans-serif;
+
+//Polices à chasse fixe (monospace)
+@courier: "Courier New", Courier, "Liberation Mono", monospace;
+@monaco: Monaco, "DejaVu Sans Mono", "Lucida Console", "Andale Mono", monospace;
+
+// Less : .font( @arial,  1.0em, 1.0, normal, normal, normal) 
+.font(@family: arial, @size: 1.0em, @lineheight: 1.0, @weight: normal, @style: normal, @variant: normal) {
+  font: @style @variant @weight @size~"/"@lineheight @family;
+} // font
+
+
+// Import font custom en local
+.custom-font(@family: arial, @weight: normal, @style: normal){
+    @font-face{
+        font-family: @family;
+        src:url('fonts/@{family}.eot');
+        src:url('fonts/@{family}.eot?#iefix') format('embedded-opentype'),
+            url('fonts/@{family}.woff') format('woff'),
+            url('fonts/@{family}.ttf') format('truetype'),
+            url('fonts/@{family}.svg#icon') format('svg');
+        font-weight: @weight;
+        font-style: @style;
+    }
+}
+ 
+// TODO : Google Web Fonts : http://www.google.com/fonts/
+// https://developers.google.com/fonts/
+// Import CSS ex : http://fonts.googleapis.com/css?family=Tangerine
+// Note : L'import de la CSS Google permet son cache browser + adapt police au browser...
+
+/* ROBOTO IMPORT via google - KO avec simpleLESS !!! */
+//@import url("http://fonts.googleapis.com/css?family=Roboto");
+//@import url('http://fonts.googleapis.com/css?family=Roboto');
+
+// Import manuel :)
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(http://themes.googleusercontent.com/static/fonts/roboto/v9/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+/* FIN ROBOTO IMPORT via google !!! */
+
+@roboto: Roboto, serif;
+
+// @roboto: Roboto, FreeSans, sans-serif;
+// debug test si actif : @roboto: Roboto, serif;
+// less : .font( @roboto,  1.0em, 1.0, normal, normal, normal) 
+// less : .font(@roboto,  2em); 
+

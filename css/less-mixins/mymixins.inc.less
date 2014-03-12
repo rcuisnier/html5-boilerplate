@@ -1,0 +1,107 @@
+/*! Licence Romain C. 
+mixins less  */
+/*
+http://lesshat.com/
+*/
+// Bug ne peut pas se compiler seul sans cela...
+// MAIS : si actif fait buger la compil du fichier principal
+//@import url("less-css3-mixins.less");
+
+.colors (@color: #000, @bgcolor:#FFF) {
+    color: @color;
+    background-color:@bgcolor;
+}
+
+.code {
+    color:#1A1;
+    background-color:#111;
+    border:1px solid #999;
+    .border-radius(10px);
+    .text-shadow(0 1px 1px #DDD);
+    .box-shadow(0 1px 9px #666);
+    padding:19px;
+}
+
+
+/*
+@text-underline:text-decoration: underline;
+@text-italic:font-style:italic; // normal
+@text-oblique:font-style:oblique;
+@text-bold:font-weight:bold;
+@text-small-caps:font-variant:small-caps;
+
+@text-left:text-align: left;
+@text-center:text-align: center;
+@text-right:text-align: right;
+*/
+
+.text-underline(){ text-decoration: underline; }
+.text-italic(){ font-style:italic; } // normal
+.text-oblique(){ font-style:oblique; }
+.text-bold(){ font-weight:bold; }
+.text-small-caps(){ font-variant:small-caps; }
+
+.text-left(){ text-align: left; }
+.text-center(){ text-align: center; }
+.text-right(){ text-align: right; }
+
+// Sizing shortcuts
+.block-size(@width, @height, @margin,@border,@padding) {
+	display:block;
+	width: 	@width;
+	height: 	@height;
+	margin: 	@margin;
+	border:  	@border;
+	padding:  @padding;
+}
+
+
+.block-full , .block-full-width {	
+	//width:100%;
+	.block-size(100%, auto, 1em, none, 1em);
+}
+
+.block-full-size {
+	//display:block;
+	//height:100%;
+	//width:100%;
+	.block-size(100%, 100%, 1em, none, 1em);
+}
+
+
+
+//colors convert fake hex+alpha (#F90E) to alpha color
+// http://stackoverflow.com/questions/5176114/lesscss-converting-rgba-to-hex-how-to-nest-color-variables-into-a-mixin
+.color(@color: @white, @alpha: 1) {
+    color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+}
+.bg-color(@color: @white, @alpha: 1) {
+    background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+}
+.border-color(@color: @white, @alpha: 1) {
+	border-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
+}
+
+
+/// WebPerf
+.activate-gpu {
+	-webkit-transform: translateZ(0px);
+	-moz-transform: translateZ(0px);
+	transform: translateZ(0px);
+}
+
+
+// Float :
+.block-float {
+	display:block;
+	float: left;
+	min-height: 1px;
+	.box-sizing(border-box);
+}
+
+.block-float-right {
+	.block-float;
+	float: right;
+}
+
+// elements.less => .clearfix to reset

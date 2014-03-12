@@ -1,0 +1,62 @@
+/* Lib reset CSS */
+//@import "less-vendors/reset/reset.less"; // Deprecated by Normalize ?
+// FFx 27+ FULL RESET : http://www.mozilla.org/en-US/firefox/27.0/releasenotes/
+// (test : http://jsfiddle.net/dstorey/gKznA/1/ )
+/*
+* {  
+	-webkit-all: unset;
+    -moz-all: unset;
+    -ms-all: unset;
+    all: unset;
+}
+*/
+
+/* Lib normalize CSS */
+//@import "less-vendors/normalize/normalize.less";
+@import "less-vendors/normalize/normalize-3.0.less";
+
+// Public LESS CSS Mixins
+@import "less-vendors/elements/elements.less";
+
+//@import "less-vendors/lesshat/lesshat.less";
+
+/* CSS Preboot LESS CSS based on bootstrap http://getpreboot.com/ */
+//@import "less-vendors/preboot/normalize.less"; // v2.1
+@import "less-vendors/preboot/preboot.less";
+//@import "less-vendors/preboot/pygments.less"; // syntax code coloration
+
+// HTML5 Boilerplate CSS Helpers
+@import "less-vendors/h5bp/main.less";
+
+/* Lib LESS CSS Mixins Romain */
+@import "less-mixins/grid.less";
+@import "less-mixins/flexbox.less";
+@import "less-mixins/less-css3-mixins.less"; 
+@import "less-mixins/mymixins.inc.less"; 
+
+// Fonts :
+@import "less-mixins/font.inc.less";
+
+// Submodules :
+@import "less-mixins/component-gncard.less";
+//@import "less-mixins/svg-icons.less";
+@import "less-mixins/svg-icons-raphael.less";
+
+
+
+
+
+
+// DEBUG :
+.debug {} // Default to prevent failed less CSS compilation
+.debug2 {} // Default to prevent failed less CSS compilation
+//.debug { border:2px solid red; } // Comment to hide
+//.debug2 { border-bottom:5px solid red; } // Comment to hide
+
+
+
+
+
+@import "style.vars.inc.less";
+
+

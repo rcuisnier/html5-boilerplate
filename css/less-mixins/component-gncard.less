@@ -1,0 +1,110 @@
+
+// Debug
+.debug {} // Default to prevent failed less CSS compilation
+.debug2 {} // Default to prevent failed less CSS compilation
+.debug { border:2px solid red; } // Comment to hide
+//.debug2 { border-bottom:5px solid red; } // Comment to hide
+
+/// Libs :
+
+
+
+
+.gn-style {
+	color:#111;
+	background-color:#EEE;
+	.color(#111,0.8);
+	.bg-color(#EEE,0.8);
+	.border-color(#F90,0.5);
+}
+
+
+
+
+.gn-card { 
+	.block-full;
+	.gn-style;
+	//.border-radius(10px);
+	.rounded(0.1em);
+	.box-shadow(  7px 7px 30px 0 #999 ); // out
+ }
+
+.gn-card .header .media { 
+	.block-float;
+	.debug;
+}
+
+// TODO ??? .media:after => .clearfix => .oocss .media:after, .oocss.bd:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x";}
+
+.gn-card .header .title { 	
+	//.block-size(50%, auto, 1em, none, 1em);
+	.debug;
+	//.oocss .media .bd;
+}
+
+.gn-card .header .info { 
+	font-size:70%;
+	//.block-size(50%, auto, 1em, none, 1em);
+	//.block-float;
+	.oocss .media .bd;
+	.debug;
+}
+
+.gn-card .header .tag { 
+	font-size:70%;
+	.debug;
+	.block-float-right;	
+}
+
+
+.gn-card .body  { 
+	.oocss .media;
+	/*
+	&:after {
+		display:block;wdth:50px;
+		//.oocss .media:after;
+		.oocss .media.after;
+		.debug;
+	}
+	*/
+	.debug;
+}
+
+/*
+.gn-card .body .media { 
+	.oocss .media .img;
+	.debug;
+}
+
+
+.gn-card .body .contentFluide { 
+	.oocss .media .bd;
+	.debug;
+}
+*/
+
+
+
+
+
+// Responsive mode - should be the default settings
+// TODO : assign up
+@media screen and (max-width: 622px) { // Nexus 7 portrait
+	
+	
+}
+
+
+@media screen and (min-width: 622px) {  // Mode tablette, tel landscape, desktop
+	
+	
+}
+
+
+
+@media screen and (min-width: 922px) { // Mode notebook, TV
+	
+	
+}
+
+
