@@ -1,10 +1,24 @@
 /*! Less CSS STYLE Romain C. */
+/* Component menu Flexbox */
 
-/* Lib reset CSS */
+// Original color
+@colorA: black;
+@colorAA: #333;
+@colorAAA : #888;
+@colorAAAA: #ccc; // + #eee
+@colorBB: green;
+
+
+// New style
+@colorA: #001;
+@colorAA: #334;
+@colorAAA : #778;
+@colorAAAA: #ccc;
+@colorBB: #369;
 
 
 * {
-  box-sizing: border-box;
+  //box-sizing: border-box;
 }
 html {
   //font-size: 12px;
@@ -17,21 +31,38 @@ html {
 }
 
 nav.main-nav-flexbox {
-  background: #eee;
+  * {
+      box-sizing: border-box;
+    }
+
+  background: @colorAAAA;
   ul {
     margin: 0;
     padding: 0;
     
     // Flex container style
     display: flex;
-    flex-wrap: wrap;
+    //flex-flow:row wrap; // flex-flow  regroupe flex-direction et flex-wrap.
+    flex-direction: row; // colum, column-reverse, row, row-reverse
+    flex-wrap: wrap; // wrap = retour ligne autorise, nowrap = overflow
     // http://www.alsacreations.com/xmedia/tuto/exemples/flexbox/flextest05.html
     // Every flexbox has same height
-    align-items:stretch;
+    align-items:stretch; // flex-start = baseline  (valign top) ; flex-end  (valign bottom); center (valign middle) ; stretch (height : 100%)
     
     justify-content: center;
     list-style: none;
   }
+  
+  li {
+      //align-self: flex-end; // Overwrite parent align-items
+      //flex: 1; // flex size
+  }
+  
+  li:last-child { // Align to the right the last item
+      margin-left: auto;
+      //flex: 1; // flex size
+  }
+  
   a {
     padding: 1.25rem 0.5rem;
     font-size: 1.6rem;
@@ -39,21 +70,33 @@ nav.main-nav-flexbox {
     font-weight: bold;
     text-decoration: none;
     
+    // Block style ?
+    display: block;
+    
     // Flexbox style
-    display: flex;
+    //display: flex;
     //align-items: flex-start;
     // http://www.alsacreations.com/xmedia/tuto/exemples/flexbox/flextest05.html
     // Every flexbox has same height
-    align-items:stretch;
-    color: #333;
-    &:hover, &:focus {
-      background: #ccc;
-      color: black;
+    //align-items:stretch; // flex-start = baseline  (valign top) ; flex-end  (valign bottom); center (valign middle) ; stretch (height : 100%)
+
+    // Menu Button Style :
+    .rounded(3px);
+    color: @colorAA; // #333;
+    border:2px solid @colorAAA;
+    outline:none;
+    
+    &:hover, &:focus, &:active {
+      // Menu Button Style Hover/Active:
+      background-color: @colorAAA; // #ccc
+      color: @colorBB; // Black
+      border:2px solid @colorAA;
+      
       svg {
-        fill: green; 
+        fill: @colorBB; // green
       }
       span {
-        color: black; 
+        //color: @colorA; // Black
       }
     }
   }
@@ -61,8 +104,9 @@ nav.main-nav-flexbox {
     display: block;
     font-size: 1rem;
     font-weight: normal;
-    color: #888;
+    //color: @colorAAAA;
     margin: 0.25rem 0 0 0;
+    min-width: 12em;
   }
   .icon {
     width: 40px;

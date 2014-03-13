@@ -1451,55 +1451,62 @@ html.svg {
 
 */
 /*! Less CSS STYLE Romain C. */
-/* Lib reset CSS */
-* {
-  box-sizing: border-box;
-}
+/* Component menu Flexbox */
 .dont-render-dawg {
   position: absolute;
   height: 0;
   width: 0;
 }
 nav.main-nav-flexbox {
-  background: #eee;
+  background: #eeeeee;
+}
+nav.main-nav-flexbox * {
+  box-sizing: border-box;
 }
 nav.main-nav-flexbox ul {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: center;
   list-style: none;
+}
+nav.main-nav-flexbox li:last-child {
+  margin-left: auto;
 }
 nav.main-nav-flexbox a {
   padding: 1.25rem 0.5rem;
   font-size: 1.6rem;
   font-weight: bold;
   text-decoration: none;
-  display: flex;
-  align-items: stretch;
-  color: #333;
+  display: block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #555555;
+  border: 2px solid #999999;
+  outline: none;
 }
 nav.main-nav-flexbox a:hover,
-nav.main-nav-flexbox a:focus {
-  background: #ccc;
-  color: black;
+nav.main-nav-flexbox a:focus,
+nav.main-nav-flexbox a:active {
+  background-color: #999999;
+  color: #772200;
+  border: 2px solid #555555;
 }
 nav.main-nav-flexbox a:hover svg,
-nav.main-nav-flexbox a:focus svg {
-  fill: green;
-}
-nav.main-nav-flexbox a:hover span,
-nav.main-nav-flexbox a:focus span {
-  color: black;
+nav.main-nav-flexbox a:focus svg,
+nav.main-nav-flexbox a:active svg {
+  fill: #772200;
 }
 nav.main-nav-flexbox span {
   display: block;
   font-size: 1rem;
   font-weight: normal;
-  color: #888;
   margin: 0.25rem 0 0 0;
+  min-width: 12em;
 }
 nav.main-nav-flexbox .icon {
   width: 40px;
