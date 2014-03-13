@@ -1,21 +1,43 @@
 /*! Less CSS STYLE Romain C. */
 /* Component menu Flexbox */
 
+/*
 // Original color
-@colorA: black;
-@colorAA: #333;
-@colorAAA : #888;
-@colorAAAA: #ccc; // + #eee
-@colorBB: green;
+@menuFlexColorA: black;
+@menuFlexColorAA: #333;
+@menuFlexColorAAA : #888;
+@menuFlexColorAAAA: #ccc; // + #eee
+@menuFlexColorBB: green;
+
+// New style violet
+@menuFlexColorA: #201;
+@menuFlexColorAA: #534;
+@menuFlexColorAAA : #978;
+@menuFlexColorAAAA: #dbc;
+
+@menuFlexColorBB: #958;
+/**/
+
+/**
+// New style blue
+@menuFlexColorA: #001;
+@menuFlexColorAA: #334;
+@menuFlexColorAAA : #778;
+@menuFlexColorAAAA: #ccc;
+
+@menuFlexColorBB: #369;
+/**/
 
 
-// New style
-@colorA: #001;
-@colorAA: #334;
-@colorAAA : #778;
-@colorAAAA: #ccc;
+// inherit global colors
+@menuFlexColorA: @colorB;
+@menuFlexColorAA: @colorBB;
+@menuFlexColorAAA : @colorBBB;
+@menuFlexColorAAAA: @colorBBBB;
 
-@colorBB: #369;
+@menuFlexColorBB: @colorCC;
+
+
 
 
 * {
@@ -36,7 +58,7 @@ nav.main-nav-flexbox {
       box-sizing: border-box;
     }
 
-  background: @colorAAAA;
+  background: @menuFlexColorAAAA;
   ul {
     margin: 0;
     padding: 0;
@@ -72,7 +94,7 @@ nav.main-nav-flexbox {
     text-decoration: none;
     
     // Block style ?
-    display: block;
+    display: flex; // = height: 100%;
     
     // Flexbox style
     //display: flex;
@@ -83,23 +105,23 @@ nav.main-nav-flexbox {
 
     // Menu Button Style :
     .rounded(3px);
-    .gradient(@colorAAA,@colorAA);
-    color: @colorA; // #333;
-    border:2px solid @colorAAA;
+    .gradient(@menuFlexColorAAA,@menuFlexColorAA);
+    color: @menuFlexColorA; // #333;
+    border:2px solid @menuFlexColorAAA;
     outline:none;
     
     &:hover, &:focus, &:active {
       // Menu Button Style Hover/Active:
-      background-color: @colorAAA; // #ccc
-    .gradient(@colorAAAA,@colorAAA);
-      color: @colorBB; // Black
-      border:2px solid @colorAA;
+      background-color: @menuFlexColorAAA; // #ccc
+    .gradient(@menuFlexColorAAAA,@menuFlexColorAAA);
+      color: @menuFlexColorBB; // Black
+      border:2px solid @menuFlexColorAA;
       
       svg {
-        fill: @colorBB; // green
+        fill: @menuFlexColorBB; // green
       }
       span {
-        //color: @colorA; // Black
+        //color: @menuFlexColorA; // Black
       }
     }
   }
@@ -107,7 +129,7 @@ nav.main-nav-flexbox {
     display: block;
     font-size: 1rem;
     font-weight: normal;
-    //color: @colorAAAA;
+    //color: @menuFlexColorAAAA;
     margin: 0.25rem 0 0 0;
     min-width: 12em;
   }
