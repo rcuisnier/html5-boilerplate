@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <!-- CSS Minified and combined through less.css compiler -
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css"> -->
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+	    <header>
+	    	<!-- TODO : breadcrumb + menu with microformat -->
+			<nav>
+				<ul>
+					<li>Your menu</li>
+					<li><a href="#todo">Your menu link</a></li>
+					<li>Your submenu
+						<ul>
+							<li>Your menu</li>
+							<li><a href="#todo">Your menu link</a></li>
+							<li><a href="#todo">Your menu link</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		
+		<section>
+
+
+	        <h1>Page Title</h1>
+	        <p>Hello world! This is HTML5 Boilerplate.</p>
+		
+			<article>
+				<header>
+					<h2>Article title</h2>
+					<p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
+				</header>
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+			</article>
+			
+			<article>
+				<header>
+					<h2>Article title</h2>
+					<p>Posted on <time datetime="2009-09-04T16:31:24+02:00">September 4th 2009</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
+				</header>
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+			</article>
+
+
+
+			<article>
+				<header>
+					<h2>Image Retina et HDPI</h2>
+					<p>Posted on <time datetime="2014-09-04T16:31:24+02:00">September 4th 2014</time> by <a href="#">Writer</a> - <a href="#comments">6 comments</a></p>
+				</header>
+
+				<h3>Image simple</h3>
+				<p>
+					Image Retina support HDPI
+				</p>
+				<p>
+					<a href="http://www.w3.org/html/wg/drafts/srcset/w3c-srcset/">W3C srcset</a>
+					<img alt="The srcset Combo" src="http://placehold.it/180x180" srcset="http://placehold.it/360x360 2x, http://placehold.it/100x180 100w, http://placehold.it/200x360 100w 2x">
+				</p>
+
+
+				<h3>Figure avec styles CSS</h3>
+				<p>
+					<figure>
+						 <style scoped media="all and (max-width: 600px)">
+						  #imgretina { width: 100px; height: 100px; }
+						 </style>
+						 <img src="a-rectangle.png" width="300" height="100" srcset="a-square.png 600w" id="imgretina" alt="Barney Frank wears a suit and glasses.">
+						 <figcaption>Barney Frank, 2011</figcaption>
+					</figure>
+				</p>
+			</article>
+
+
+
+
+
+			<article>
+				<header>
+					<h2>Exemple de microformats v2</h2>
+					<p>
+						<a href="http://microformats.org/wiki/microformats-2">Microformats v2</a>
+
+						<a class="h-card" href="http://rohit.khare.org/">
+						 	<img alt="Rohit Khare" src="http://placehold.it/180x180" />
+						</a>
+
+					</p>
+				</header>
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+			</article>
+
+
+
+			<article>
+				<header>
+					<h2>Exemple de schema.org</h2>
+					<p>
+						<a href="http://schema.org/Person">Schema Person</a>
+
+					</p>
+				</header>
+				<!-- Schema.org Person Profil -->
+				<div itemscope itemtype="http://schema.org/Person">
+				  <span itemprop="name">Jane Doe</span>
+				  <img src="janedoe.jpg" itemprop="image" />
+
+				  <span itemprop="jobTitle">Professor</span>
+				  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				    <span itemprop="streetAddress">
+				      20341 Whitworth Institute
+				      405 N. Whitworth
+				    </span>
+				    <span itemprop="addressLocality">Seattle</span>,
+				    <span itemprop="addressRegion">WA</span>
+				    <span itemprop="postalCode">98052</span>
+				  </div>
+				  <span itemprop="telephone">(425) 123-4567</span>
+				  <a href="mailto:jane-doe@xyz.edu" itemprop="email">
+				    jane-doe@xyz.edu</a>
+
+				  Jane's home page:
+				  <a href="http://www.janedoe.com" itemprop="url">janedoe.com</a>
+
+				  Graduate students:
+				  <a href="http://www.xyz.edu/students/alicejones.html" itemprop="colleague">
+				    Alice Jones</a>
+				  <a href="http://www.xyz.edu/students/bobsmith.html" itemprop="colleague">
+				    Bob Smith</a>
+				</div>
+			</article>
+			
+
+
+			
+		</section>
+
+		<aside>
+			<h2>About section</h2>
+			<p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+		</aside>
+
+		<footer>
+
+			<p>
+		        Sources :
+		        HTML5 Struture : <a href="http://css-tricks.com/snippets/html/html5-page-structure/">CSS Tricks - HTML5 structure</a> 
+		        Folder structure : HTML5 Boilerplate
+		        Microformats datas semantic structure
+		        LESS CSS Librairies : Normalize, Elements (based on bootstrap), CSS3 Mixins (prefixed browser), H5BP Helpers, LessHat, Preboot, TODO : OOCSS
+		        SVG Icons from RaphaelJS
+			</p>
+			<p>Copyright 2009 Your name</p>
+			<!-- TODO : address , and copyright with microformat -->
+		</footer>
+
+
+
+        <!-- TODO : Jquery 2 + JQtouch + Jquery-UI -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

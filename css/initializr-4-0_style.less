@@ -1,0 +1,133 @@
+// Commentaire suivant maintenu apres minification (bizarre apparait en dbl)
+/*! Licence Romain C.    */
+@import url("initializr-4-0_vars.inc.less");
+
+/* Import libs LESS CSS */
+@import url("less-vendors/normalize/normalize-3.0.less");
+
+@import url("less-mixins/less-css3-mixins.less");
+@import url("less-mixins/font.inc.less");
+@import url("less-mixins/mymixins.inc.less");
+
+
+@import url("initializr-4-0_main.less");
+
+
+/* CSS of the site Demo RC */
+body {
+    .colors(@colord, @colorm);
+}
+html,button,input,select,textarea {
+    //color: @colord; // colore
+}
+
+::selection {
+    background: @colorf; // colorf
+    text-shadow: none;
+}
+
+h1 { 
+ color: @colorh;
+}
+
+h2 {
+ color: @colorh;
+ //.text-underline
+}
+
+h3 {
+ color: @colori;
+ //.colors(@colora, @colord); /* add mixin color,bgcolor */
+}
+
+p {
+ //color: @colorc;
+ //.colors(@colora, @colord); /* add mixin color,bgcolor */
+ //.code; 
+ //.font(@roboto,  1em); 
+ ///.font(@courier,  0.7em); 
+}
+
+hr {
+    border-top: 1px solid #ccc;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: @colork;
+    color: @colorj;
+    padding: 0.2em 0;
+}
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+
+
+
+///    ALL: Color Theme (Orange)
+.header-container {
+    border-bottom: 20px solid @colorg;
+}
+
+.footer-container,
+.main aside {
+    border-top: 20px solid @colorg;
+}
+
+.header-container,
+.footer-container,
+.main aside {
+    background: @colorh;
+}
+
+.title {
+    color: @colori;
+}
+
+nav a {
+    .colors(@colorh, @colorg);  
+    //color: @colori; 
+    //background: @colorg;
+}
+
+nav a:hover,
+nav a:visited {
+    color: @colori; 
+}
+
+
+article {
+    .colors(@colord, @colorl);
+    border : 1px solid @colork;
+    padding:10px;
+    .border-radius(3px);
+}
+
+
+
+
+/*// Media Queries */
+@media only screen and (min-width: 768px) {
+
+/*///   WIDE: CSS3 Effects */
+    .header-container,
+    .main aside {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+    }
+
+}
+
+
+/* Print styles */
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+}

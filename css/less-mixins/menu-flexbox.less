@@ -1,0 +1,175 @@
+/*! Less CSS STYLE Romain C. */
+
+/* Lib reset CSS */
+
+
+* {
+  box-sizing: border-box;
+}
+html {
+  //font-size: 12px;
+}
+
+.dont-render-dawg {
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+
+nav.main-nav-flexbox {
+  background: #eee;
+  ul {
+    margin: 0;
+    padding: 0;
+    
+    // Flex container style
+    display: flex;
+    flex-wrap: wrap;
+    // http://www.alsacreations.com/xmedia/tuto/exemples/flexbox/flextest05.html
+    // Every flexbox has same height
+    align-items:stretch;
+    
+    justify-content: center;
+    list-style: none;
+  }
+  a {
+    padding: 1.25rem 0.5rem;
+    font-size: 1.6rem;
+    //max-width: 140px; // 180px
+    font-weight: bold;
+    text-decoration: none;
+    
+    // Flexbox style
+    display: flex;
+    //align-items: flex-start;
+    // http://www.alsacreations.com/xmedia/tuto/exemples/flexbox/flextest05.html
+    // Every flexbox has same height
+    align-items:stretch;
+    color: #333;
+    &:hover, &:focus {
+      background: #ccc;
+      color: black;
+      svg {
+        fill: green; 
+      }
+      span {
+        color: black; 
+      }
+    }
+  }
+  span {
+    display: block;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #888;
+    margin: 0.25rem 0 0 0;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 1rem;
+    fill: #999;
+  }
+  &.outlines {
+    * {
+      //outline: 1px solid rgba(red, 0.5); 
+      outline: 1px solid rgba(255,0,0 , 0.5); 
+    }
+  }
+
+  .ico.download:before {
+    .svg.ico.block.before; // or .svg.ico.uxrepo.before
+    //.svg.ico.down.bg;
+	.svg.download;
+    //.debug;
+  }
+  .ico.help:before {
+    .svg.ico.block.before; // or .svg.ico.uxrepo.before
+    //.svg.ico.down.bg;
+	.svg.help;
+    //.debug;
+  }
+  .ico.settings:before {
+    .svg.ico.block.before; // or .svg.ico.uxrepo.before
+	.svg.settings;
+    //.debug;
+  }
+  .ico.back:before {
+    .svg.ico.block.before; // or .svg.ico.uxrepo.before
+	.svg.arrowleft2;
+    //.debug;
+  }
+  
+  .ico.home:before {
+    .svg.ico.block.before; // or .svg.ico.uxrepo.before
+	.svg.home; //  : better icon
+    //.debug;
+  }
+  .ico.contact:before {
+    .svg.ico.block.before; // or .svg.ico.uxrepo.before
+	.svg.notebook; //  : better icon
+    //.debug;
+  }
+  .ico.client:before {
+    .svg.ico.block.before; // or .svg.ico.uxrepo.before
+	.svg.user; // people; //  : better icon
+    //.debug;
+  }
+  .ico.about:before {
+    .svg.ico.block.before; // or .svg.ico.uxrepo.before
+	.svg.help; //  : better icon
+    //.debug;
+  }
+  .ico.search:before {
+    .svg.ico.block.before; // or .svg.ico.uxrepo.before
+	.svg.search; //  : better icon
+    //.debug;
+  }
+}
+
+
+.svg.ico.block.before { // Size & Positionning RaphaelJS icon
+	content:" ";	
+	//border:1px solid red; // debug 
+	
+	//background-size: 50px 50px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	//background-position:0.2em 0.9em; // Centrage horizontal et vertical
+	//padding-left:3em;
+	//margin:0.6em; // espacements lateraux	
+	//line-height:1em;
+	//height:1em;
+	//padding:1.1em; // Dimension icone
+	//padding-top:1.2em;
+	//-webkit-mask-size:3em;
+	
+	display: block;
+    float: left;
+    height: 4em;
+    width: 30%;
+}
+    
+
+// Form controls
+.options {
+  text-align: center;
+  padding: 2rem 0;
+  select {
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .main-nav {
+    a {
+      max-width: 500px;
+      font-size: 2rem; 
+    }
+    .icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

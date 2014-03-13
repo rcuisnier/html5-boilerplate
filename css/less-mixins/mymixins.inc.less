@@ -8,6 +8,26 @@ mymixins less  */
 .colors (@color: #000, @bgcolor:#FFF) {
     color: @color;
     background-color:@bgcolor;
+    //.coloralpha(@color,1);
+    //.bg-coloralpha(@bgcolor,1);
+}
+
+.coloralpha(@baseColor,@alpha:0.5) {
+    color: rgba(red(@baseColor), green(@baseColor), blue(@baseColor), @alpha);
+    //color:#d14836;
+}
+//Alias :
+.colora(@baseColor,@alpha:0.5) {
+    .coloralpha(@baseColor,@alpha);
+}
+
+.bg-coloralpha(@baseColor,@alpha:0.5) {
+    background-color: rgba(red(@baseColor), green(@baseColor), blue(@baseColor), @alpha);
+    //color:#d14836;
+}
+//Alias :
+.bgcolora(@baseColor,@alpha:0.5) {
+    .bg-coloralpha(@baseColor,@alpha);
 }
 
 .code {
