@@ -1,0 +1,48 @@
+CACHE MANIFEST
+### manifest.appcache
+## You must modify the manifest file itself to inform the browser to refresh cached files.
+### version 1.0
+
+### Doc : http://www.html5rocks.com/en/tutorials/appcache/beginner/
+### Doc2 : https://developer.mozilla.org/en/docs/HTML/Using_the_application_cache
+### Facultatif (old browser) add directive in apache : AddType text/cache-manifest .appcache
+
+
+### Check Chrome Cache : chrome://appcache-internals/
+
+### DEMO :
+### index.html
+### stylesheet.css
+### images/logo.png
+### scripts/main.js
+### http://cdn.example.com/scripts/main.js
+
+###
+CACHE:
+### !Important: Do not specify the manifest itself in the cache manifest file, otherwise it will be nearly impossible to inform the browser a new manifest is available.!
+index.html
+favicon.ico
+css/style.css
+#img/logo.png
+js/main.js
+js/plugins.js
+
+#css/*
+#img/*
+#js/*
+
+# Resources that require the user to be online.
+NETWORK:
+*
+
+
+
+FALLBACK:
+# static-offline.html will be served if static.html is inaccessible
+# offline.jpg will be served in place of all images in img/
+# offline.html will be served in place of all other .html files
+#/static.html /static-offline.html
+#img/ img/offline.jpg
+img/ img/offline.svg
+#/ /offline.html
+/ offline.html
